@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="4.2.5" timestamp="2012-05-09T04:20:31.145">
+<file name="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/apis/openstack-nova/src/main/java/org/jclouds/openstack/nova/v1_1/compute/functions/ImageToOperatingSystem.java">
+<violation beginline="19" endline="131" begincolumn="1" endcolumn="2" rule="TooManyStaticImports" ruleset="Import Statement Rules" package="org.jclouds.openstack.nova.v1_1.compute.functions" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#TooManyStaticImports" priority="3">
+Too many static imports may lead to messy code
+</violation>
+</file>
+<file name="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/apis/openstack-nova/src/main/java/org/jclouds/openstack/nova/v1_1/compute/functions/ServerInZoneToNodeMetadata.java">
+<violation beginline="19" endline="169" begincolumn="1" endcolumn="2" rule="TooManyStaticImports" ruleset="Import Statement Rules" package="org.jclouds.openstack.nova.v1_1.compute.functions" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#TooManyStaticImports" priority="3">
+Too many static imports may lead to messy code
+</violation>
+</file>
+<file name="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/apis/openstack-nova/src/main/java/org/jclouds/openstack/nova/v1_1/compute/loaders/CreateUniqueKeyPair.java">
+<violation beginline="72" endline="74" begincolumn="12" endcolumn="10" rule="EmptyCatchBlock" ruleset="Basic Rules" package="org.jclouds.openstack.nova.v1_1.compute.loaders" class="CreateUniqueKeyPair" method="load" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+</file>
+<file name="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/apis/openstack-nova/src/main/java/org/jclouds/openstack/nova/v1_1/compute/predicates/AllNodesInGroupTerminated.java">
+<violation beginline="19" endline="58" begincolumn="1" endcolumn="1" rule="TooManyStaticImports" ruleset="Import Statement Rules" package="org.jclouds.openstack.nova.v1_1.compute.predicates" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#TooManyStaticImports" priority="3">
+Too many static imports may lead to messy code
+</violation>
+</file>
+<file name="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/apis/openstack-nova/src/main/java/org/jclouds/openstack/nova/v1_1/options/CreateServerOptions.java">
+<violation beginline="19" endline="346" begincolumn="1" endcolumn="2" rule="TooManyStaticImports" ruleset="Import Statement Rules" package="org.jclouds.openstack.nova.v1_1.options" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#TooManyStaticImports" priority="3">
+Too many static imports may lead to messy code
+</violation>
+</file>
+<file name="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/apis/openstack-nova/src/main/java/org/jclouds/openstack/nova/v1_1/options/CreateVolumeOptions.java">
+<violation beginline="25" endline="25" begincolumn="1" endcolumn="22" rule="UnusedImports" ruleset="Import Statement Rules" package="org.jclouds.openstack.nova.v1_1.options" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.util.List'
+</violation>
+<violation beginline="28" endline="28" begincolumn="1" endcolumn="21" rule="UnusedImports" ruleset="Import Statement Rules" package="org.jclouds.openstack.nova.v1_1.options" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.util.Set'
+</violation>
+<violation beginline="32" endline="32" begincolumn="1" endcolumn="46" rule="UnusedImports" ruleset="Import Statement Rules" package="org.jclouds.openstack.nova.v1_1.options" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'org.jclouds.encryption.internal.Base64'
+</violation>
+<violation beginline="34" endline="34" begincolumn="1" endcolumn="60" rule="UnusedImports" ruleset="Import Statement Rules" package="org.jclouds.openstack.nova.v1_1.options" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'org.jclouds.openstack.nova.v1_1.domain.SecurityGroup'
+</violation>
+<violation beginline="37" endline="37" begincolumn="1" endcolumn="39" rule="UnusedImports" ruleset="Import Statement Rules" package="org.jclouds.openstack.nova.v1_1.options" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'org.jclouds.util.Preconditions2'
+</violation>
+<violation beginline="42" endline="42" begincolumn="1" endcolumn="46" rule="UnusedImports" ruleset="Import Statement Rules" package="org.jclouds.openstack.nova.v1_1.options" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'com.google.common.collect.ImmutableSet'
+</violation>
+<violation beginline="43" endline="43" begincolumn="1" endcolumn="39" rule="UnusedImports" ruleset="Import Statement Rules" package="org.jclouds.openstack.nova.v1_1.options" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'com.google.common.collect.Lists'
+</violation>
+<violation beginline="45" endline="45" begincolumn="1" endcolumn="38" rule="UnusedImports" ruleset="Import Statement Rules" package="org.jclouds.openstack.nova.v1_1.options" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'com.google.common.collect.Sets'
+</violation>
+<violation beginline="46" endline="46" begincolumn="1" endcolumn="50" rule="UnusedImports" ruleset="Import Statement Rules" package="org.jclouds.openstack.nova.v1_1.options" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'com.google.gson.annotations.SerializedName'
+</violation>
+</file>
+</pmd>

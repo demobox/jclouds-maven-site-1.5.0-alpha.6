@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+<duplication lines="18" tokens="155">
+<file line="226" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/apis/openstack-nova/src/main/java/org/jclouds/openstack/nova/v1_1/options/CreateServerOptions.java"/>
+<file line="115" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/apis/openstack-nova/src/main/java/org/jclouds/openstack/nova/v1_1/options/CreateVolumeOptions.java"/>
+<codefragment>
+<![CDATA[
+   public CreateVolumeOptions metadata(Map<String, String> metadata) {
+      checkNotNull(metadata, "metadata");
+      checkArgument(metadata.size() <= 5,
+            "you cannot have more then 5 metadata values.  You specified: " + metadata.size());
+      for (Entry<String, String> entry : metadata.entrySet()) {
+         checkArgument(
+               entry.getKey().getBytes().length < 255,
+               String.format("maximum length of metadata key is 255 bytes.  Key specified %s is %d bytes",
+                     entry.getKey(), entry.getKey().getBytes().length));
+         checkArgument(entry.getKey().getBytes().length < 255, String.format(
+               "maximum length of metadata value is 255 bytes.  Value specified for %s (%s) is %d bytes",
+               entry.getKey(), entry.getValue(), entry.getValue().getBytes().length));
+      }
+      this.metadata = ImmutableMap.copyOf(metadata);
+      return this;
+   }
+
+   public CreateVolumeOptions name(String name) {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="37" tokens="109">
+<file line="72" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/apis/openstack-nova/src/main/java/org/jclouds/openstack/nova/v1_1/domain/Flavor.java"/>
+<file line="149" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/apis/openstack-nova/src/main/java/org/jclouds/openstack/nova/v1_1/domain/Image.java"/>
+<codefragment>
+<![CDATA[
+                  in.getProgress()).server(in.getServer()).metadata(in.getMetadata());
+      }
+
+      /**
+       * {@inheritDoc}
+       */
+      @Override
+      public Builder id(String id) {
+         return Builder.class.cast(super.id(id));
+      }
+
+      /**
+       * {@inheritDoc}
+       */
+      @Override
+      public Builder name(String name) {
+         return Builder.class.cast(super.name(name));
+      }
+
+      /**
+       * {@inheritDoc}
+       */
+      @Override
+      public Builder links(Set<Link> links) {
+         return Builder.class.cast(super.links(links));
+      }
+
+      /**
+       * {@inheritDoc}
+       */
+      @Override
+      public Builder fromResource(Resource in) {
+         return Builder.class.cast(super.fromResource(in));
+      }
+   }
+
+   private final Date updated;
+]]>
+</codefragment>
+</duplication>
+</pmd-cpd>

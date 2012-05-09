@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+<duplication lines="125" tokens="267">
+<file line="28" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/apis/cloudstack/src/main/java/org/jclouds/cloudstack/domain/ISOExtraction.java"/>
+<file line="29" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/apis/cloudstack/src/main/java/org/jclouds/cloudstack/domain/TemplateExtraction.java"/>
+<codefragment>
+<![CDATA[
+public class TemplateExtraction implements Comparable<TemplateExtraction> {
+
+   public static Builder builder() {
+      return new Builder();
+   }
+
+   public static class Builder {
+
+      private long id;
+      private long accountId;
+      private Date created;
+      private long extractId;
+      private ExtractMode extractMode;
+      private String name;
+      private String state;
+      private String status;
+      private String storageType;
+      private int uploadPercentage;
+      private String url;
+      private long zoneId;
+      private String zoneName;
+
+      /**
+       * @param id the id of extracted object
+       */
+      public Builder id(long id) {
+         this.id = id;
+         return this;
+      }
+
+      /**
+       * @param accountId the account id to which the extracted object belongs
+       */
+      public Builder accountId(long accountId) {
+         this.accountId = accountId;
+         return this;
+      }
+
+      /**
+       * @param created the time and date the object was created
+       */
+      public Builder created(Date created) {
+         this.created = created;
+         return this;
+      }
+
+      /**
+       * @param extractId the upload id of extracted object
+       */
+      public Builder extractId(long extractId) {
+         this.extractId = extractId;
+         return this;
+      }
+
+      /**
+       * @param extractMode the mode of extraction - upload or download
+       */
+      public Builder extractMode(ExtractMode extractMode) {
+         this.extractMode = extractMode;
+         return this;
+      }
+
+      /**
+       * @param name the name of the extracted object
+       */
+      public Builder name(String name) {
+         this.name = name;
+         return this;
+      }
+
+      /**
+       * @param state the state of the extracted object
+       */
+      public Builder state(String state) {
+         this.state = state;
+         return this;
+      }
+
+      /**
+       * @param status the status of the extraction
+       */
+      public Builder status(String status) {
+         this.status = status;
+         return this;
+      }
+
+      /**
+       * @param storageType type of the storage
+       */
+      public Builder storageType(String storageType) {
+         this.storageType = storageType;
+         return this;
+      }
+
+      /**
+       * @param uploadPercentage the percentage of the entity uploaded to the specified location
+       */
+      public Builder uploadPercentage(int uploadPercentage) {
+         this.uploadPercentage = uploadPercentage;
+         return this;
+      }
+
+      /**
+       * @param url if mode = upload then url of the uploaded entity. if mode = download the url from which the entity can be downloaded
+       */
+      public Builder url(String url) {
+         this.url = url;
+         return this;
+      }
+
+      /**
+       * @param zoneId zone ID the object was extracted from
+       */
+      public Builder zoneId(long zoneId) {
+         this.zoneId = zoneId;
+         return this;
+      }
+
+      /**
+       * @param zoneName zone name the object was extracted from
+       */
+      public Builder zoneName(String zoneName) {
+         this.zoneName = zoneName;
+         return this;
+      }
+]]>
+</codefragment>
+</duplication>
+<duplication lines="16" tokens="133">
+<file line="294" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/apis/cloudstack/src/main/java/org/jclouds/cloudstack/domain/IPForwardingRule.java"/>
+<file line="312" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/apis/cloudstack/src/main/java/org/jclouds/cloudstack/domain/PortForwardingRule.java"/>
+<codefragment>
+<![CDATA[
+      result = prime * result + publicPort;
+      result = prime * result + ((state == null) ? 0 : state.hashCode());
+      result = prime * result + ((virtualMachineDisplayName == null) ? 0 : virtualMachineDisplayName.hashCode());
+      result = prime * result + (int) (virtualMachineId ^ (virtualMachineId >>> 32));
+      result = prime * result + ((virtualMachineName == null) ? 0 : virtualMachineName.hashCode());
+      return result;
+   }
+
+   @Override
+   public boolean equals(Object obj) {
+      if (this == obj)
+         return true;
+      if (obj == null)
+         return false;
+      if (getClass() != obj.getClass())
+         return false;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="96" tokens="128">
+<file line="178" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/apis/cloudstack/src/main/java/org/jclouds/cloudstack/domain/ISOExtraction.java"/>
+<file line="208" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/apis/cloudstack/src/main/java/org/jclouds/cloudstack/domain/TemplateExtraction.java"/>
+<codefragment>
+<![CDATA[
+   TemplateExtraction() {
+   }
+
+   /**
+    * @return the id of extracted object
+    */
+   public long getId() {
+      return id;
+   }
+
+   /**
+    * @return the account id to which the extracted object belongs
+    */
+   public long getAccountId() {
+      return accountId;
+   }
+
+   /**
+    * @return the time and date the object was created
+    */
+   public Date getCreated() {
+      return created;
+   }
+
+   /**
+    * @return the upload id of extracted object
+    */
+   public long getExtractId() {
+      return extractId;
+   }
+
+   /**
+    * @return the mode of extraction - upload or download
+    */
+   public ExtractMode getExtractMode() {
+      return extractMode;
+   }
+
+   /**
+    * @return the name of the extracted object
+    */
+   public String getName() {
+      return name;
+   }
+
+   /**
+    * @return the state of the extracted object
+    */
+   public String getState() {
+      return state;
+   }
+
+   /**
+    * @return the status of the extraction
+    */
+   public String getStatus() {
+      return status;
+   }
+
+   /**
+    * @return type of the storage
+    */
+   public String getStorageType() {
+      return storageType;
+   }
+
+   /**
+    * @return the percentage of the entity uploaded to the specified location
+    */
+   public int getUploadPercentage() {
+      return uploadPercentage;
+   }
+
+   /**
+    * @return if mode = upload then url of the uploaded entity. if mode = download the url from which the entity can be downloaded
+    */
+   public String getUrl() {
+      return url;
+   }
+
+   /**
+    * @return zone ID the object was extracted from
+    */
+   public long getZoneId() {
+      return zoneId;
+   }
+
+   /**
+    * @return zone name the object was extracted from
+    */
+   public String getZoneName() {
+      return zoneName;
+   }
+
+   @Override
+   public boolean equals(Object obj) {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="25" tokens="124">
+<file line="333" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/apis/cloudstack/src/main/java/org/jclouds/cloudstack/domain/IPForwardingRule.java"/>
+<file line="345" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/apis/cloudstack/src/main/java/org/jclouds/cloudstack/domain/PortForwardingRule.java"/>
+<codefragment>
+<![CDATA[
+      if (privatePort != other.privatePort)
+         return false;
+      if (state == null) {
+         if (other.state != null)
+            return false;
+      } else if (!state.equals(other.state))
+         return false;
+      if (virtualMachineDisplayName == null) {
+         if (other.virtualMachineDisplayName != null)
+            return false;
+      } else if (!virtualMachineDisplayName.equals(other.virtualMachineDisplayName))
+         return false;
+      if (virtualMachineId != other.virtualMachineId)
+         return false;
+      if (virtualMachineName == null) {
+         if (other.virtualMachineName != null)
+            return false;
+      } else if (!virtualMachineName.equals(other.virtualMachineName))
+         return false;
+      return true;
+   }
+
+   @Override
+   public String toString() {
+      return "PortForwardingRule{" +
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="115">
+<file line="383" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/apis/cloudstack/src/main/java/org/jclouds/cloudstack/domain/Snapshot.java"/>
+<file line="155" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/apis/cloudstack/src/main/java/org/jclouds/cloudstack/domain/VMGroup.java"/>
+<codefragment>
+<![CDATA[
+      if (name != null ? !name.equals(vmGroup.name) : vmGroup.name != null) return false;
+
+      return true;
+   }
+
+   @Override
+   public int hashCode() {
+      int result = (int) (id ^ (id >>> 32));
+      result = 31 * result + (account != null ? account.hashCode() : 0);
+      result = 31 * result + (created != null ? created.hashCode() : 0);
+      result = 31 * result + (domain != null ? domain.hashCode() : 0);
+      result = 31 * result + (int) (domainId ^ (domainId >>> 32));
+      result = 31 * result + (name != null ? name.hashCode() : 0);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="33" tokens="110">
+<file line="50" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/apis/cloudstack/src/main/java/org/jclouds/cloudstack/domain/DiskOffering.java"/>
+<file line="59" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/apis/cloudstack/src/main/java/org/jclouds/cloudstack/domain/ServiceOffering.java"/>
+<codefragment>
+<![CDATA[
+      private Set<String> tags = ImmutableSet.of();
+
+      public Builder id(long id) {
+         this.id = id;
+         return this;
+      }
+
+      public Builder name(String name) {
+         this.name = name;
+         return this;
+      }
+
+      public Builder displayText(String displayText) {
+         this.displayText = displayText;
+         return this;
+      }
+
+      public Builder created(Date created) {
+         this.created = created;
+         return this;
+      }
+
+      public Builder domain(String domain) {
+         this.domain = domain;
+         return this;
+      }
+
+      public Builder domainId(long domainId) {
+         this.domainId = domainId;
+         return this;
+      }
+
+      public Builder cpuNumber(int cpuNumber) {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="17" tokens="103">
+<file line="598" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/apis/cloudstack/src/main/java/org/jclouds/cloudstack/domain/Network.java"/>
+<file line="345" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/apis/cloudstack/src/main/java/org/jclouds/cloudstack/domain/Zone.java"/>
+<codefragment>
+<![CDATA[
+      Zone other = (Zone) obj;
+      if (DNS1 == null) {
+         if (other.DNS1 != null)
+            return false;
+      } else if (!DNS1.equals(other.DNS1))
+         return false;
+      if (DNS2 == null) {
+         if (other.DNS2 != null)
+            return false;
+      } else if (!DNS2.equals(other.DNS2))
+         return false;
+      if (VLAN == null) {
+         if (other.VLAN != null)
+            return false;
+      } else if (!VLAN.equals(other.VLAN))
+         return false;
+      if (description == null) {
+]]>
+</codefragment>
+</duplication>
+</pmd-cpd>

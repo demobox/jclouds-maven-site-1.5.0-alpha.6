@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="4.2.5" timestamp="2012-05-09T06:37:39.966">
+<file name="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/labs/openstack-glance/src/main/java/org/jclouds/openstack/glance/v1_0/handlers/GlanceErrorHandler.java">
+<violation beginline="23" endline="23" begincolumn="1" endcolumn="31" rule="UnusedImports" ruleset="Import Statement Rules" package="org.jclouds.openstack.glance.v1_0.handlers" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.util.regex.Matcher'
+</violation>
+<violation beginline="24" endline="24" begincolumn="1" endcolumn="31" rule="UnusedImports" ruleset="Import Statement Rules" package="org.jclouds.openstack.glance.v1_0.handlers" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.util.regex.Pattern'
+</violation>
+</file>
+</pmd>

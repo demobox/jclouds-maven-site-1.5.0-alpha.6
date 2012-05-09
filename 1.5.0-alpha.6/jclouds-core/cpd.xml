@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+<duplication lines="23" tokens="191">
+<file line="84" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/core/src/main/java/org/jclouds/predicates/RetryableNumTimesPredicate.java"/>
+<file line="82" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/core/src/main/java/org/jclouds/predicates/RetryablePredicate.java"/>
+<codefragment>
+<![CDATA[
+      } catch (InterruptedException e) {
+         logger.warn(e, "predicate %s on %s interrupted, returning false", input, predicate);
+         Thread.currentThread().interrupt();
+      } catch (RuntimeException e) {
+         if (getFirstThrowableOfType(e, ExecutionException.class) != null) {
+            logger.warn(e, "predicate %s on %s errored [%s], returning false", input, predicate, e.getMessage());
+            return false;
+         } else if (getFirstThrowableOfType(e, IllegalStateException.class) != null) {
+            logger.warn(e, "predicate %s on %s illegal state [%s], returning false", input, predicate, e.getMessage());
+            return false;
+         } else if (getFirstThrowableOfType(e, CancellationException.class) != null) {
+            logger.warn(e, "predicate %s on %s cancelled [%s], returning false", input, predicate, e.getMessage());
+            return false;
+         } else if (getFirstThrowableOfType(e, TimeoutException.class) != null) {
+            logger.warn(e, "predicate %s on %s timed out [%s], returning false", input, predicate, e.getMessage());
+            return false;
+         } else
+            throw e;
+      }
+      return false;
+   }
+
+   protected long nextMaxInterval(long attempt, Date end) {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="33" tokens="189">
+<file line="147" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/core/src/main/java/org/jclouds/io/ContentMetadataBuilder.java"/>
+<file line="133" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/core/src/main/java/org/jclouds/io/payloads/BaseImmutableContentMetadata.java"/>
+<codefragment>
+<![CDATA[
+      BaseImmutableContentMetadata other = (BaseImmutableContentMetadata) obj;
+      if (contentDisposition == null) {
+         if (other.contentDisposition != null)
+            return false;
+      } else if (!contentDisposition.equals(other.contentDisposition))
+         return false;
+      if (contentEncoding == null) {
+         if (other.contentEncoding != null)
+            return false;
+      } else if (!contentEncoding.equals(other.contentEncoding))
+         return false;
+      if (contentLanguage == null) {
+         if (other.contentLanguage != null)
+            return false;
+      } else if (!contentLanguage.equals(other.contentLanguage))
+         return false;
+      if (contentLength == null) {
+         if (other.contentLength != null)
+            return false;
+      } else if (!contentLength.equals(other.contentLength))
+         return false;
+      if (!Arrays.equals(contentMD5, other.contentMD5))
+         return false;
+      if (contentType == null) {
+         if (other.contentType != null)
+            return false;
+      } else if (!contentType.equals(other.contentType))
+         return false;
+      return true;
+   }
+
+   @Override
+   public ContentMetadataBuilder toBuilder() {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="23" tokens="178">
+<file line="124" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/core/src/main/java/org/jclouds/io/ContentMetadataBuilder.java"/>
+<file line="110" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/core/src/main/java/org/jclouds/io/payloads/BaseImmutableContentMetadata.java"/>
+<codefragment>
+<![CDATA[
+   }
+
+   @Override
+   public int hashCode() {
+      final int prime = 31;
+      int result = 1;
+      result = prime * result + ((contentDisposition == null) ? 0 : contentDisposition.hashCode());
+      result = prime * result + ((contentEncoding == null) ? 0 : contentEncoding.hashCode());
+      result = prime * result + ((contentLanguage == null) ? 0 : contentLanguage.hashCode());
+      result = prime * result + ((contentLength == null) ? 0 : contentLength.hashCode());
+      result = prime * result + Arrays.hashCode(contentMD5);
+      result = prime * result + ((contentType == null) ? 0 : contentType.hashCode());
+      return result;
+   }
+
+   @Override
+   public boolean equals(Object obj) {
+      if (this == obj)
+         return true;
+      if (obj == null)
+         return false;
+      if (getClass() != obj.getClass())
+         return false;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="17" tokens="118">
+<file line="85" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/core/src/main/java/org/jclouds/util/Throwables2.java"/>
+<file line="101" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-alpha.6-deploy/core/src/main/java/org/jclouds/util/Throwables2.java"/>
+<codefragment>
+<![CDATA[
+   public static <T extends Throwable> T getFirstThrowableOfType(CreationException e, Class<T> clazz) {
+      for (Message message : e.getErrorMessages()) {
+         if (message.getCause() != null) {
+            T cause = getFirstThrowableOfType(message.getCause(), clazz);
+            if (cause instanceof ProvisionException)
+               return getFirstThrowableOfType(ProvisionException.class.cast(cause), clazz);
+            else if (cause instanceof TransformParallelException)
+               return getFirstThrowableOfType(TransformParallelException.class.cast(cause), clazz);
+            else if (cause instanceof CreationException)
+               return getFirstThrowableOfType(CreationException.class.cast(cause), clazz);
+            return cause;
+         }
+      }
+      return null;
+   }
+
+   public static <T> T propagateOrNull(Exception from) {
+]]>
+</codefragment>
+</duplication>
+</pmd-cpd>
